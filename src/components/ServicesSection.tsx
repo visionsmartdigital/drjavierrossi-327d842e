@@ -1,5 +1,6 @@
 import { useI18n } from "@/lib/i18n";
 import { ImagePlaceholder } from "./ImagePlaceholder";
+import serviceBoneSurgery from "@/assets/service-bone-surgery.jpg";
 
 interface Service {
   id: string;
@@ -84,7 +85,11 @@ export function ServicesSection() {
                 svc.featured ? "border-t-2 border-t-primary" : ""
               }`}
             >
-              <ImagePlaceholder label={svc.imgLabel} aspectRatio="16/9" className="rounded-none border-0" />
+              {svc.id === "osea" ? (
+                <img src={serviceBoneSurgery} alt={t(svc.titleEs, svc.titleEn)} className="w-full object-cover" style={{ aspectRatio: "16/9" }} />
+              ) : (
+                <ImagePlaceholder label={svc.imgLabel} aspectRatio="16/9" className="rounded-none border-0" />
+              )}
               <div className="p-6">
                 <span className="text-xs text-muted-foreground">{svc.num}</span>
                 <h3 className="mt-1 text-lg font-medium text-foreground">
