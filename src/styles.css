@@ -69,7 +69,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0 0);
   
-  --primary: oklch(0.52 0.08 168);
+  --primary: oklch(0.62 0.1 290);
   --primary-foreground: oklch(1 0 0);
   
   --secondary: oklch(0.67 0.08 290);
@@ -86,7 +86,7 @@
   
   --border: oklch(0.92 0.005 90);
   --input: oklch(0.92 0.005 90);
-  --ring: oklch(0.52 0.08 168);
+  --ring: oklch(0.62 0.1 290);
   
   /* Custom tokens */
   --teal: oklch(0.52 0.08 168);

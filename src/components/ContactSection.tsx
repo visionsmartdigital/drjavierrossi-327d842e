@@ -107,7 +107,7 @@ export function ContactSection() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground text-sm font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
+                  className="w-full bg-teal text-teal-foreground text-sm font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
                   data-gtm="contact-form-submit"
                 >
                   {t("Enviar consulta", "Send inquiry")}

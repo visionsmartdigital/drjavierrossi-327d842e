@@ -33,7 +33,7 @@ export function HeroSection() {
                 href="https://wa.me/5491155921388"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-primary text-primary-foreground text-sm font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
+                className="inline-flex items-center bg-teal text-teal-foreground text-sm font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
                 data-gtm="whatsapp-hero"
               >
                 {t("Consultar por WhatsApp", "Contact via WhatsApp")}

@@ -47,7 +47,7 @@ export function Navbar() {
             href="https://wa.me/5491155921388"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center bg-primary text-primary-foreground text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
+            className="hidden sm:inline-flex items-center bg-teal text-teal-foreground text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
             data-gtm="whatsapp-navbar"
           >
             {t("Consultar por WhatsApp", "Contact via WhatsApp")}
@@ -93,7 +93,7 @@ export function Navbar() {
             href="https://wa.me/5491155921388"
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-center bg-primary text-primary-foreground text-sm font-medium px-4 py-2 rounded-md"
+            className="block text-center bg-teal text-teal-foreground text-sm font-medium px-4 py-2 rounded-md"
             data-gtm="whatsapp-navbar-mobile"
           >
             {t("Consultar por WhatsApp", "Contact via WhatsApp")}
