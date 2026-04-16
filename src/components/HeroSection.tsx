@@ -1,5 +1,5 @@
 import { useI18n } from "@/lib/i18n";
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import heroImage from "@/assets/hero-image.jpg";
 
 export function HeroSection() {
   const { t } = useI18n();
