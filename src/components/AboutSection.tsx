@@ -28,9 +28,11 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Photo */}
-          <ImagePlaceholder
-            label={t("Foto retrato Dr. Rossi — se subirá", "Dr. Rossi portrait photo — will be uploaded")}
-            aspectRatio="3/4"
+          <img
+            src={drRossiPhoto}
+            alt="Dr. Javier Rossi"
+            className="w-full rounded-lg object-cover"
+            style={{ aspectRatio: "3/4" }}
           />
 
           {/* Content */}
