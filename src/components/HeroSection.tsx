@@ -1,5 +1,5 @@
 import { useI18n } from "@/lib/i18n";
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import heroImage from "@/assets/hero-image.jpg";
 
 export function HeroSection() {
   const { t } = useI18n();
@@ -47,9 +47,11 @@ export function HeroSection() {
             </div>
           </div>
           {/* Image */}
-          <ImagePlaceholder
-            label={t("Imagen hero — Foto profesional Dr. Rossi", "Hero image — Dr. Rossi professional photo")}
-            aspectRatio="4/5"
+          <img
+            src={heroImage}
+            alt={t("Cirugía facial especializada", "Specialized facial surgery")}
+            className="w-full rounded-lg object-cover"
+            style={{ aspectRatio: "4/5" }}
           />
         </div>
       </div>
