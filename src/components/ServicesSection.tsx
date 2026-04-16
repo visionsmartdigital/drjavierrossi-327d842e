@@ -3,6 +3,14 @@ import { ImagePlaceholder } from "./ImagePlaceholder";
 import serviceBoneSurgery from "@/assets/service-bone-surgery.jpg";
 import serviceEyeSurgery from "@/assets/service-eye-surgery.jpg";
 import serviceRejuvenation from "@/assets/service-rejuvenation.jpg";
+import serviceFfs from "@/assets/service-ffs.jpg";
+
+const serviceImages: Record<string, string> = {
+  ffs: serviceFfs,
+  osea: serviceBoneSurgery,
+  rejuvenecimiento: serviceRejuvenation,
+  mirada: serviceEyeSurgery,
+};
 
 interface Service {
   id: string;
@@ -87,12 +95,8 @@ export function ServicesSection() {
                 svc.featured ? "border-t-2 border-t-primary" : ""
               }`}
             >
-              {svc.id === "osea" ? (
-                <img src={serviceBoneSurgery} alt={t(svc.titleEs, svc.titleEn)} className="w-full object-cover" style={{ aspectRatio: "16/9" }} />
-              ) : svc.id === "mirada" ? (
-                <img src={serviceEyeSurgery} alt={t(svc.titleEs, svc.titleEn)} className="w-full object-cover" style={{ aspectRatio: "16/9" }} />
-              ) : svc.id === "rejuvenecimiento" ? (
-                <img src={serviceRejuvenation} alt={t(svc.titleEs, svc.titleEn)} className="w-full object-cover" style={{ aspectRatio: "16/9" }} />
+              {serviceImages[svc.id] ? (
+                <img src={serviceImages[svc.id]} alt={t(svc.titleEs, svc.titleEn)} className="w-full object-cover" style={{ aspectRatio: "16/9" }} />
               ) : (
                 <ImagePlaceholder label={svc.imgLabel} aspectRatio="16/9" className="rounded-none border-0" />
               )}
