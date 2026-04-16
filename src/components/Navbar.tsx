@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
+import logoRossi from "@/assets/logoRossi.png";
 
 export function Navbar() {
   const { lang, toggleLang, t } = useI18n();
@@ -15,11 +16,9 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo placeholder */}
+        {/* Logo */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="w-10 h-10 bg-surface border border-border rounded flex items-center justify-center">
-            <span className="text-muted-foreground text-[10px]">Logo</span>
-          </div>
+          <img src={logoRossi} alt="Dr. Javier Rossi" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Desktop nav */}
