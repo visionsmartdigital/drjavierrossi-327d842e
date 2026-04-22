@@ -44,31 +44,35 @@ export function BeforeAfterSection() {
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {cases.map(({ n, before, after }) => (
             <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
-              <ReactCompareSlider
-                itemOne={
-                  before ? (
-                    <ReactCompareSliderImage
-                      src={before}
-                      alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
-                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                    />
-                  ) : (
-                    <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
-                  )
-                }
-                itemTwo={
-                  after ? (
-                    <ReactCompareSliderImage
-                      src={after}
-                      alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
-                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                    />
-                  ) : (
-                    <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
-                  )
-                }
-                style={{ width: "100%", height: "100%" }}
-              />
+              {mounted ? (
+                <ReactCompareSlider
+                  itemOne={
+                    before ? (
+                      <ReactCompareSliderImage
+                        src={before}
+                        alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
+                        style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                      />
+                    ) : (
+                      <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+                    )
+                  }
+                  itemTwo={
+                    after ? (
+                      <ReactCompareSliderImage
+                        src={after}
+                        alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
+                        style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                      />
+                    ) : (
+                      <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
+                    )
+                  }
+                  style={{ width: "100%", height: "100%" }}
+                />
+              ) : (
+                <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+              )}
               <span className="absolute top-3 left-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
                 {t("Antes", "Before")}
               </span>
