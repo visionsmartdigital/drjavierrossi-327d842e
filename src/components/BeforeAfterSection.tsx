@@ -1,0 +1,56 @@
+import { ReactCompareSlider } from "react-compare-slider";
+import { useI18n } from "@/lib/i18n";
+
+function PlaceholderImage({ label }: { label: string }) {
+  return (
+    <div
+      className="flex items-center justify-center bg-muted w-full h-full"
+      style={{ aspectRatio: "3/4" }}
+    >
+      <p className="text-muted-foreground text-sm text-center px-4 font-sans">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+export function BeforeAfterSection() {
+  const { t } = useI18n();
+
+  const cases = [1, 2, 3];
+
+  return (
+    <section className="py-16 md:py-24 bg-background">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <span className="text-sm font-medium text-primary tracking-wide">
+          {t("Resultados", "Results")}
+        </span>
+        <h2 className="mt-3 text-2xl sm:text-3xl font-medium text-foreground">
+          {t("Antes y después", "Before and after")}
+        </h2>
+
+        <div className="mt-10 grid md:grid-cols-3 gap-6">
+          {cases.map((n) => (
+            <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
+              <ReactCompareSlider
+                itemOne={
+                  <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+                }
+                itemTwo={
+                  <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
+                }
+                style={{ width: "100%", height: "100%" }}
+              />
+              <span className="absolute top-3 left-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
+                {t("Antes", "Before")}
+              </span>
+              <span className="absolute top-3 right-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
+                {t("Después", "After")}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

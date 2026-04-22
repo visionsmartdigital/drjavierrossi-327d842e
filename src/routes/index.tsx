@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ServicesSection } from "@/components/ServicesSection";
+import { BeforeAfterSection } from "@/components/BeforeAfterSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { ContactSection } from "@/components/ContactSection";
@@ -31,6 +32,7 @@ function Index() {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
+        <BeforeAfterSection />
         <TestimonialsSection />
         <FinalCTA />
         <ContactSection />
