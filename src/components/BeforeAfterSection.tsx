@@ -33,7 +33,6 @@ export function BeforeAfterSection() {
           {cases.map((n) => (
             <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <ReactCompareSlider
-                position={50}
                 itemOne={
                   <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
                 }
