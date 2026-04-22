@@ -19,6 +19,11 @@ function PlaceholderImage({ label }: { label: string }) {
 
 export function BeforeAfterSection() {
   const { t } = useI18n();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const cases: Array<{ n: number; before?: string; after?: string }> = [
     { n: 1, before: beforeCase1, after: afterCase1 },
