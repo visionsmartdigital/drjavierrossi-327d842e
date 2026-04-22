@@ -29,7 +29,7 @@ export function BeforeAfterSection() {
 
   const cases: Array<{ n: number; before?: string; after?: string }> = [
     { n: 1, before: beforeCase1, after: afterCase1 },
-    { n: 2 },
+    { n: 2, before: beforeCase2, after: afterCase2 },
     { n: 3 },
   ];
 
