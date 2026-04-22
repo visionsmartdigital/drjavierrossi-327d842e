@@ -3,6 +3,8 @@ import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slide
 import { useI18n } from "@/lib/i18n";
 import beforeCase1 from "@/assets/before-after-1-before.png";
 import afterCase1 from "@/assets/before-after-1-after.png";
+import beforeCase2 from "@/assets/before-after-2-before.png";
+import afterCase2 from "@/assets/before-after-2-after.png";
 
 function PlaceholderImage({ label }: { label: string }) {
   return (
