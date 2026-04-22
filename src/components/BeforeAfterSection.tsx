@@ -1,5 +1,7 @@
-import { ReactCompareSlider } from "react-compare-slider";
+import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 import { useI18n } from "@/lib/i18n";
+import beforeCase1 from "@/assets/before-after-1-before.png";
+import afterCase1 from "@/assets/before-after-1-after.png";
 
 function PlaceholderImage({ label }: { label: string }) {
   return (
@@ -17,7 +19,11 @@ function PlaceholderImage({ label }: { label: string }) {
 export function BeforeAfterSection() {
   const { t } = useI18n();
 
-  const cases = [1, 2, 3];
+  const cases: Array<{ n: number; before?: string; after?: string }> = [
+    { n: 1, before: beforeCase1, after: afterCase1 },
+    { n: 2 },
+    { n: 3 },
+  ];
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -30,14 +36,30 @@ export function BeforeAfterSection() {
         </h2>
 
         <div className="mt-10 grid md:grid-cols-3 gap-6">
-          {cases.map((n) => (
+          {cases.map(({ n, before, after }) => (
             <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <ReactCompareSlider
                 itemOne={
-                  <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+                  before ? (
+                    <ReactCompareSliderImage
+                      src={before}
+                      alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
+                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    />
+                  ) : (
+                    <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+                  )
                 }
                 itemTwo={
-                  <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
+                  after ? (
+                    <ReactCompareSliderImage
+                      src={after}
+                      alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
+                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    />
+                  ) : (
+                    <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
+                  )
                 }
                 style={{ width: "100%", height: "100%" }}
               />
