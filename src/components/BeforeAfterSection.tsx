@@ -56,7 +56,7 @@ export function BeforeAfterSection() {
 
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {cases.map(({ n, before, after }) => (
-            <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/4.4" }}>
               {mounted ? (
                 <ReactCompareSlider
                   itemOne={
