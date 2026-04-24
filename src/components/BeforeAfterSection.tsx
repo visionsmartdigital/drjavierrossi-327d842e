@@ -64,7 +64,12 @@ export function BeforeAfterSection() {
                       <ReactCompareSliderImage
                         src={before}
                         alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
-                        style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: n === 6 ? "top center" : undefined,
+                          width: "100%",
+                          height: "100%",
+                        }}
                       />
                     ) : (
                       <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
@@ -75,7 +80,12 @@ export function BeforeAfterSection() {
                       <ReactCompareSliderImage
                         src={after}
                         alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
-                        style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: n === 6 ? "top center" : undefined,
+                          width: "100%",
+                          height: "100%",
+                        }}
                       />
                     ) : (
                       <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
