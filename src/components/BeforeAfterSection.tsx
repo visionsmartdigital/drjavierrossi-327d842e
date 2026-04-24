@@ -33,6 +33,9 @@ export function BeforeAfterSection() {
     { n: 1, before: beforeCase1, after: afterCase1 },
     { n: 2, before: beforeCase2, after: afterCase2 },
     { n: 3, before: beforeCase3, after: afterCase3 },
+    { n: 4 },
+    { n: 5 },
+    { n: 6 },
   ];
 
   return (
