@@ -61,7 +61,7 @@ export function HeroSection() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { stat: "+25", label: t("Años de experiencia", "Years of experience") },
-            { stat: "PhD", label: t("Doctor UBA en Medicina Quirúrgica", "UBA PhD in Surgical Medicine") },
+            { stat: "Doctorate ", label: t("Doctor UBA en Medicina Quirúrgica", "UBA PhD in Surgical Medicine") },
             { stat: "×3", label: t("Especializaciones quirúrgicas", "Surgical specializations") },
             { stat: "UBA", label: t("Profesor de cirugía", "Professor of Surgery") },
           ].map((item) => (
