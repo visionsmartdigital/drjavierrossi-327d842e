@@ -16,7 +16,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           {/* Logo */}
-          <img src={logoRossi} alt="Dr. Javier Rossi" className="max-w-[160px] w-auto h-auto md:h-10 md:max-w-none shrink-0" />
+          <img src={logoRossi} alt="Dr. Javier Rossi" className="max-w-[160px] w-auto h-auto mx-auto md:mx-0 md:h-10 md:max-w-none shrink-0" />
 
           {/* Links */}
           <nav className="flex flex-wrap gap-6">
