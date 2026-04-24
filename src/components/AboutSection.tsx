@@ -9,11 +9,11 @@ export function AboutSection() {
   const credentials = [
     {
       es: "Doctor en Medicina Quirúrgica — UBA | Especializado en Cirugía Facial. El máximo nivel académico en la carrera médica argentina.",
-      en: "PhD in Surgical Medicine — UBA | Specialized in Facial Surgery. The highest academic level in Argentine medicine.",
+      en: "Doctorate in Surgical Medicine — UBA | Specialized in Facial Surgery. The highest academic level in Argentine medicine.",
       detailEs:
         "El Doctorado en Medicina es el máximo escalón académico de la carrera médica universitaria en Argentina. No existe título de posgrado superior. El Dr. Rossi lo obtuvo con especialización en Cirugía Facial en la Universidad de Buenos Aires.",
       detailEn:
-        "A PhD in Medicine is the highest academic level in Argentine university medical training. No higher postgraduate degree exists. Dr. Rossi earned it with a specialization in Facial Surgery at the University of Buenos Aires.",
+        "A Doctorate in Medicine is the highest academic level in Argentine university medical training. No higher postgraduate degree exists. Dr. Rossi earned it with a specialization in Facial Surgery at the University of Buenos Aires.",
     },
     {
       es: "Triple especialización quirúrgica | Cirugía General · Cirugía de Cabeza, Cuello y Maxilofacial · Cirugía Plástica, Reparadora y Estética.",
