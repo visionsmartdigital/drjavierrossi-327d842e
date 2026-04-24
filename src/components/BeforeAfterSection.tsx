@@ -66,7 +66,7 @@ export function BeforeAfterSection() {
                         alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
                         style={{
                           objectFit: "cover",
-                          objectPosition: n === 6 ? "top center" : undefined,
+                          objectPosition: n === 4 || n === 6 ? "top center" : undefined,
                           width: "100%",
                           height: "100%",
                         }}
@@ -82,7 +82,7 @@ export function BeforeAfterSection() {
                         alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
                         style={{
                           objectFit: "cover",
-                          objectPosition: n === 6 ? "top center" : undefined,
+                          objectPosition: n === 4 || n === 6 ? "top center" : undefined,
                           width: "100%",
                           height: "100%",
                         }}
