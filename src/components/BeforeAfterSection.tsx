@@ -9,6 +9,8 @@ import beforeCase3 from "@/assets/before-after-3-before.png";
 import afterCase3 from "@/assets/before-after-3-after.png";
 import beforeCase4 from "@/assets/before-after-4-before.png";
 import afterCase4 from "@/assets/before-after-4-after.png";
+import beforeCase5 from "@/assets/before-after-5-before.png";
+import afterCase5 from "@/assets/before-after-5-after.png";
 
 function PlaceholderImage({ label }: { label: string }) {
   return (
@@ -36,7 +38,7 @@ export function BeforeAfterSection() {
     { n: 2, before: beforeCase2, after: afterCase2 },
     { n: 3, before: beforeCase3, after: afterCase3 },
     { n: 4, before: beforeCase4, after: afterCase4 },
-    { n: 5 },
+    { n: 5, before: beforeCase5, after: afterCase5 },
     { n: 6 },
   ];
 
