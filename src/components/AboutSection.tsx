@@ -32,12 +32,12 @@ export function AboutSection() {
         "Dr. Rossi doesn't only operate — he trains the surgeons of the future. His role as director and university professor at UBA, Universidad del Salvador, Barceló and UCES reflects the academic community's recognition of his career.",
     },
     {
-      es: "Hospital Militar Central | Miembro del American College of Surgeons y American Society of Plastic Surgery.",
-      en: "Central Military Hospital | Member of the American College of Surgeons and American Society of Plastic Surgery.",
+      es: "Hospital Militar Central | Miembro del American College of Surgeons, American Society of Plastic Surgery, Asociación Argentina de Cirugía y de la Asociación Argentina de Cirugía Estética Facial.",
+      en: "Hospital Militar Central | Miembro del American College of Surgeons, American Society of Plastic Surgery, Asociación Argentina de Cirugía y de la Asociación Argentina de Cirugía Estética Facial.",
       detailEs:
-        "Centro de referencia nacional para cirugías de alta complejidad. El Dr. Rossi desarrolló gran parte de su carrera en el HMC, uno de los hospitales con mayor exigencia técnica y quirúrgica del país.",
+        "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. El Dr. Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
       detailEn:
-        "A national reference center for high-complexity surgeries. Dr. Rossi developed much of his career at the HMC, one of the country's most technically and surgically demanding hospitals.",
+        "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. El Dr. Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
     },
   ];
 
