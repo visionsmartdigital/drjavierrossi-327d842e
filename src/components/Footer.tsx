@@ -1,4 +1,5 @@
 import { useI18n } from "@/lib/i18n";
+import logoRossi from "@/assets/logo-rossi.png";
 
 export function Footer() {
   const { t } = useI18n();
@@ -14,10 +15,8 @@ export function Footer() {
     <footer className="bg-footer text-footer-foreground py-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          {/* Logo placeholder */}
-          <div className="w-10 h-10 bg-footer-foreground/10 border border-footer-foreground/20 rounded flex items-center justify-center shrink-0">
-            <span className="text-[10px] text-footer-foreground/60">Logo</span>
-          </div>
+          {/* Logo */}
+          <img src={logoRossi} alt="Dr. Javier Rossi" className="h-10 w-auto shrink-0" />
 
           {/* Links */}
           <nav className="flex flex-wrap gap-6">
