@@ -4,14 +4,43 @@ import { useI18n } from "@/lib/i18n";
 export function ContactSection() {
   const { t } = useI18n();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // GTM event — ready for integration
-    if (typeof window !== "undefined" && (window as any).dataLayer) {
-      (window as any).dataLayer.push({ event: "contact_form_submit" });
+    setError(null);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, service, message }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Submit failed");
+      }
+      if (typeof window !== "undefined" && (window as any).dataLayer) {
+        (window as any).dataLayer.push({ event: "contact_form_submit" });
+      }
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(
+        t(
+          "Hubo un error al enviar. Intentá nuevamente.",
+          "There was an error sending. Please try again.",
+        ),
+      );
+    } finally {
+      setSubmitting(false);
     }
-    setSubmitted(true);
   };
 
   const serviceOptions = [
@@ -60,6 +89,9 @@ export function ContactSection() {
                   <input
                     type="text"
                     required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    maxLength={100}
                     className="w-full border border-border rounded-md px-3 py-2.5 text-sm bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                   />
                 </div>
@@ -68,6 +100,9 @@ export function ContactSection() {
                   <input
                     type="email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    maxLength={255}
                     className="w-full border border-border rounded-md px-3 py-2.5 text-sm bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                   />
                 </div>
@@ -77,6 +112,9 @@ export function ContactSection() {
                   </label>
                   <input
                     type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    maxLength={50}
                     className="w-full border border-border rounded-md px-3 py-2.5 text-sm bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                   />
                 </div>
@@ -86,6 +124,8 @@ export function ContactSection() {
                   </label>
                   <select
                     required
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
                     className="w-full border border-border rounded-md px-3 py-2.5 text-sm bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                   >
                     <option value="">{t("Seleccionar...", "Select...")}</option>
@@ -102,15 +142,24 @@ export function ContactSection() {
                   </label>
                   <textarea
                     rows={3}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    maxLength={2000}
                     className="w-full border border-border rounded-md px-3 py-2.5 text-sm bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-primary resize-none"
                   />
                 </div>
+                {error && (
+                  <p className="text-sm text-destructive">{error}</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-teal text-teal-foreground text-sm font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
+                  disabled={submitting}
+                  className="w-full bg-teal text-teal-foreground text-sm font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity disabled:opacity-60"
                   data-gtm="contact-form-submit"
                 >
-                  {t("Enviar consulta", "Send inquiry")}
+                  {submitting
+                    ? t("Enviando...", "Sending...")
+                    : t("Enviar consulta", "Send inquiry")}
                 </button>
               </form>
             )}
