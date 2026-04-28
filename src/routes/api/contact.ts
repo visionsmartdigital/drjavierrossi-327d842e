@@ -89,7 +89,7 @@ export const Route = createFileRoute("/api/contact")({
             "X-Connection-Api-Key": RESEND_API_KEY,
           },
           body: JSON.stringify({
-            from: "Dr. Javier Rossi <onboarding@resend.dev>",
+            from: "Dr. Javier Rossi <noreply@drjavierrossi.com>",
             to: RECIPIENTS,
             reply_to: email,
             subject,
