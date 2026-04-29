@@ -11,7 +11,7 @@ export function FinalCTA() {
         </h2>
         <p className="mt-4 text-base opacity-80 leading-relaxed">
           {t(
-            "La primera consulta es el punto de partida. El Dr. Rossi evalúa tu caso, responde todas tus preguntas y te propone el camino más adecuado.",
+            "La primera consulta es el punto de partida. Dr. Javier Rossi evalúa tu caso, responde todas tus preguntas y te propone el camino más adecuado.",
             "The first consultation is the starting point. Dr. Rossi evaluates your case, answers all your questions and proposes the most appropriate path."
           )}
         </p>
