@@ -42,7 +42,7 @@ export function HeroSection() {
                 href="#about"
                 className="text-sm text-primary hover:underline font-medium"
               >
-                {t("Conocer al Dr. Rossi →", "Meet Dr. Rossi →")}
+                {t("Conocer a Dr. Javier Rossi →", "Meet Dr. Rossi →")}
               </a>
             </div>
           </div>
