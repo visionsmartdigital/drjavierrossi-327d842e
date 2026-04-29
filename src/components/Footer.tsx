@@ -5,7 +5,7 @@ export function Footer() {
   const { t } = useI18n();
 
   const links = [
-    { href: "#about", label: t("El Dr. Rossi", "About") },
+    { href: "#about", label: t("Dr. Javier Rossi", "About") },
     { href: "#servicios", label: t("Servicios", "Services") },
     { href: "#testimonios", label: t("Testimonios", "Testimonials") },
     { href: "#contacto", label: t("Contacto", "Contact") },
