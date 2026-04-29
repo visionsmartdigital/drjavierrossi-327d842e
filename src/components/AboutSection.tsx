@@ -11,7 +11,7 @@ export function AboutSection() {
       es: "Doctorado en Medicina Quirúrgica — UBA | Especializado en Cirugía Facial. El máximo nivel académico en la carrera médica argentina.",
       en: "Doctorado in Surgical Medicine — UBA | Specialized in Facial Surgery. The highest academic level in Argentine medicine.",
       detailEs:
-        "El Doctorado en Medicina es el máximo escalón académico de la carrera médica universitaria en Argentina. No existe título de posgrado superior. El Dr. Rossi lo obtuvo con especialización en Cirugía Facial en la Universidad de Buenos Aires.",
+        "El Doctorado en Medicina es el máximo escalón académico de la carrera médica universitaria en Argentina. No existe título de posgrado superior. Dr. Javier Rossi lo obtuvo con especialización en Cirugía Facial en la Universidad de Buenos Aires.",
       detailEn:
         "A Doctorado in Medicine is the highest academic level in Argentine university medical training. No higher postgraduate degree exists. Dr. Rossi earned it with a specialization in Facial Surgery at the University of Buenos Aires.",
     },
@@ -19,7 +19,7 @@ export function AboutSection() {
       es: "Triple especialización quirúrgica | Cirugía General · Cirugía de Cabeza, Cuello y Maxilofacial · Cirugía Plástica, Reparadora y Estética.",
       en: "Triple surgical specialization | General Surgery · Head, Neck & Maxillofacial Surgery · Plastic, Reconstructive & Aesthetic Surgery.",
       detailEs:
-        "Pocos cirujanos en Argentina combinan estas tres especializaciones. Esta formación le permite al Dr. Rossi abordar el rostro desde una perspectiva integral: estructura ósea, tejidos blandos y estética, con dominio técnico en cada nivel.",
+        "Pocos cirujanos en Argentina combinan estas tres especializaciones. Esta formación le permite a Dr. Javier Rossi abordar el rostro desde una perspectiva integral: estructura ósea, tejidos blandos y estética, con dominio técnico en cada nivel.",
       detailEn:
         "Few surgeons in Argentina combine these three specializations. This training allows Dr. Rossi to approach the face from an integral perspective: bone structure, soft tissue and aesthetics, with technical mastery at every level.",
     },
@@ -27,7 +27,7 @@ export function AboutSection() {
       es: "Director de Carrera y Residencia de Cirugía — UBA | Profesor universitario en UBA, Universidad del Salvador, Barceló y UCES.",
       en: "Director of Surgery Career & Residency — UBA | University professor at UBA, Universidad del Salvador, Barceló and UCES.",
       detailEs:
-        "El Dr. Rossi no solo opera — forma a los cirujanos del futuro. Su rol como director y profesor universitario en UBA, Universidad del Salvador, Barceló y UCES refleja el reconocimiento de la comunidad académica a su trayectoria.",
+        "Dr. Javier Rossi no solo opera — forma a los cirujanos del futuro. Su rol como director y profesor universitario en UBA, Universidad del Salvador, Barceló y UCES refleja el reconocimiento de la comunidad académica a su trayectoria.",
       detailEn:
         "Dr. Rossi doesn't only operate — he trains the surgeons of the future. His role as director and university professor at UBA, Universidad del Salvador, Barceló and UCES reflects the academic community's recognition of his career.",
     },
@@ -35,9 +35,9 @@ export function AboutSection() {
       es: "Hospital Militar Central | Miembro del American College of Surgeons, American Society of Plastic Surgery, Asociación Argentina de Cirugía y de la Asociación Argentina de Cirugía Estética Facial.",
       en: "Hospital Militar Central | Miembro del American College of Surgeons, American Society of Plastic Surgery, Asociación Argentina de Cirugía y de la Asociación Argentina de Cirugía Estética Facial.",
       detailEs:
-        "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. El Dr. Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
+        "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. Dr. Javier Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
       detailEn:
-        "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. El Dr. Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
+        "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. Dr. Javier Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
     },
   ];
 
