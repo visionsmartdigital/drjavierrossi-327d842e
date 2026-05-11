@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export function ContactSection() {
