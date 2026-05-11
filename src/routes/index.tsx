@@ -35,6 +35,7 @@ function Index() {
         <ServicesSection />
         <BeforeAfterSection />
         <TestimonialsSection />
+        <InstagramReelsSection />
         <FinalCTA />
         <ContactSection />
       </main>
