@@ -6,6 +6,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { BeforeAfterSection } from "@/components/BeforeAfterSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { InstagramReelsSection } from "@/components/InstagramReelsSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
