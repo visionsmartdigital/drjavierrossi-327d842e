@@ -39,6 +39,22 @@ export function AboutSection() {
       detailEn:
         "Centro de referencia nacional para cirugías de alta complejidad con mayor exigencia técnica y quirúrgica del país. Dr. Javier Rossi es desde hace 15 años, jefe de la División de Cirugía y segundo jefe de Departamento Quirúrgico.",
     },
+    {
+      es: "Director Médico y Fundador de Crear, Centro de Cirugía Plástica, Medicina Estética y Odontología.",
+      en: "Medical Director and Founder of Crear, Center for Plastic Surgery, Aesthetic Medicine and Dentistry.",
+      detailEs:
+        "Crear es el centro médico fundado y dirigido por el Dr. Rossi, donde confluyen la cirugía plástica, la medicina estética y la odontología bajo un mismo estándar de excelencia. Un espacio diseñado para acompañar a cada paciente de forma integral.",
+      detailEn:
+        "Crear is the medical center founded and led by Dr. Rossi, where plastic surgery, aesthetic medicine and dentistry converge under the same standard of excellence. A space designed to support each patient in an integral way.",
+    },
+    {
+      es: "Director Médico de T-Change, Centro Especializado en Cirugía Transgénero Internacional.",
+      en: "Medical Director of T-Change, International Center Specialized in Transgender Surgery.",
+      detailEs:
+        "T-Change es el centro internacional especializado en cirugía transgénero dirigido por el Dr. Rossi. Referente en Facial Feminization Surgery para pacientes de todo el mundo que buscan un resultado seguro, preciso y alineado con su identidad.",
+      detailEn:
+        "T-Change is the international center specialized in transgender surgery led by Dr. Rossi. A reference in Facial Feminization Surgery for patients worldwide seeking a safe, precise result aligned with their identity.",
+    },
   ];
 
   return (

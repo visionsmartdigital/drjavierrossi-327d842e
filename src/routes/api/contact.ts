@@ -111,5 +111,8 @@ async function handleRequest(request: Request) {
 }
 
 export const Route = createFileRoute("/api/contact")({
-  loader: ({ request }) => handleRequest(request),
+  component: () => null,
 });
+
+// Keep handler exported for future wiring
+export { handleRequest };
