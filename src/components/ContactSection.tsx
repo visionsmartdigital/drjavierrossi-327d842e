@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export function ContactSection() {
@@ -69,6 +70,17 @@ export function ContactSection() {
               <p>📍 Av. Acoyte 76 piso 5D, Caballito, CABA, Argentina</p>
               <p>📱 +54 9 11 5592-1388</p>
               <p>✉️ consultas@drjavierrossi.com</p>
+              <p>
+                <a
+                  href="https://www.instagram.com/drjavierrossi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
+                >
+                  <Instagram className="w-4 h-4" />
+                  <span>Instagram del Dr. Rossi</span>
+                </a>
+              </p>
             </div>
           </div>
 
