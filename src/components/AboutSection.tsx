@@ -56,7 +56,7 @@ export function AboutSection() {
           {/* Content */}
           <div>
             <span className="text-sm font-medium text-primary tracking-wide">
-              {t("El profesional", "The professional")}
+              {t("Perfil profesional", "Professional profile")}
             </span>
             <h2 className="mt-3 text-2xl sm:text-3xl font-medium text-foreground leading-snug">
               {t(
