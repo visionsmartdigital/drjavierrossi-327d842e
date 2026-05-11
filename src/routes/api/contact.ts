@@ -111,5 +111,9 @@ async function handleRequest(request: Request) {
 }
 
 export const Route = createFileRoute("/api/contact")({
-  loader: ({ request }) => handleRequest(request),
+  server: {
+    handlers: {
+      POST: ({ request }: { request: Request }) => handleRequest(request),
+    },
+  },
 });
