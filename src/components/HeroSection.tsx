@@ -5,12 +5,24 @@ export function HeroSection() {
   const { t } = useI18n();
 
   return (
-    <section className="pt-24 pb-0 bg-background">
+    <section className="pt-4 md:pt-24 pb-0 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center py-12 md:py-20">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center py-4 md:py-20">
           {/* Text */}
           <div>
-            <span className="text-sm font-medium text-primary tracking-wide">
+            <div className="md:hidden overflow-hidden w-full">
+              <div className="hero-marquee-track text-[14px] font-semibold text-primary tracking-wide">
+                {Array.from({ length: 2 }).map((_, i) => (
+                  <span key={i} className="pr-12">
+                    {t(
+                      "Cirugía Facial Especializada · Buenos Aires",
+                      "Specialized Facial Surgery · Buenos Aires"
+                    )}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <span className="hidden md:inline text-sm font-medium text-primary tracking-wide">
               {t(
                 "Cirugía Facial Especializada · Buenos Aires",
                 "Specialized Facial Surgery · Buenos Aires"
