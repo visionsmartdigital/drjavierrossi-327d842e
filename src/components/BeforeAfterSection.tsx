@@ -35,13 +35,13 @@ export function BeforeAfterSection() {
     setMounted(true);
   }, []);
 
-  const cases: Array<{ n: number; before?: string; after?: string }> = [
-    { n: 1, before: beforeCase1, after: afterCase1 },
-    { n: 2, before: beforeCase2, after: afterCase2 },
-    { n: 3, before: beforeCase3, after: afterCase3 },
-    { n: 4, before: beforeCase4, after: afterCase4 },
-    { n: 5, before: beforeCase5, after: afterCase5 },
-    { n: 6, before: beforeCase6, after: afterCase6 },
+  const cases: Array<{ n: number; before?: string; after?: string; label: string; labelEn: string }> = [
+    { n: 1, before: beforeCase1, after: afterCase1, label: "Feminización Facial", labelEn: "Facial Feminization" },
+    { n: 2, before: beforeCase2, after: afterCase2, label: "Feminización Facial", labelEn: "Facial Feminization" },
+    { n: 3, before: beforeCase3, after: afterCase3, label: "Feminización Facial", labelEn: "Facial Feminization" },
+    { n: 4, before: beforeCase4, after: afterCase4, label: "Rejuvenecimiento Facial", labelEn: "Facial Rejuvenation" },
+    { n: 5, before: beforeCase5, after: afterCase5, label: "Cirugía de la Mirada", labelEn: "Eye Surgery" },
+    { n: 6, before: beforeCase6, after: afterCase6, label: "Cirugía Estética Ósea Facial", labelEn: "Facial Bone Aesthetic Surgery" },
   ];
 
   return (
@@ -55,53 +55,58 @@ export function BeforeAfterSection() {
         </h2>
 
         <div className="mt-10 grid md:grid-cols-3 gap-6">
-          {cases.map(({ n, before, after }) => (
-            <div key={n} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/5.06" }}>
-              {mounted ? (
-                <ReactCompareSlider
-                  itemOne={
-                    before ? (
-                      <ReactCompareSliderImage
-                        src={before}
-                        alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
-                        style={{
-                          objectFit: "cover",
-                          objectPosition: n === 4 || n === 6 ? "top center" : undefined,
-                          width: "100%",
-                          height: "100%",
-                        }}
-                      />
-                    ) : (
-                      <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
-                    )
-                  }
-                  itemTwo={
-                    after ? (
-                      <ReactCompareSliderImage
-                        src={after}
-                        alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
-                        style={{
-                          objectFit: "cover",
-                          objectPosition: n === 4 || n === 6 ? "top center" : undefined,
-                          width: "100%",
-                          height: "100%",
-                        }}
-                      />
-                    ) : (
-                      <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
-                    )
-                  }
-                  style={{ width: "100%", height: "100%" }}
-                />
-              ) : (
-                <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
-              )}
-              <span className="absolute top-3 left-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
-                {t("Antes", "Before")}
-              </span>
-              <span className="absolute top-3 right-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
-                {t("Después", "After")}
-              </span>
+          {cases.map(({ n, before, after, label, labelEn }) => (
+            <div key={n}>
+              <div className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "3/5.06" }}>
+                {mounted ? (
+                  <ReactCompareSlider
+                    itemOne={
+                      before ? (
+                        <ReactCompareSliderImage
+                          src={before}
+                          alt={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`}
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: n === 4 || n === 6 ? "top center" : undefined,
+                            width: "100%",
+                            height: "100%",
+                          }}
+                        />
+                      ) : (
+                        <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+                      )
+                    }
+                    itemTwo={
+                      after ? (
+                        <ReactCompareSliderImage
+                          src={after}
+                          alt={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`}
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: n === 4 || n === 6 ? "top center" : undefined,
+                            width: "100%",
+                            height: "100%",
+                          }}
+                        />
+                      ) : (
+                        <PlaceholderImage label={`${t("Después", "After")} — ${t("Caso", "Case")} ${n}`} />
+                      )
+                    }
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                ) : (
+                  <PlaceholderImage label={`${t("Antes", "Before")} — ${t("Caso", "Case")} ${n}`} />
+                )}
+                <span className="absolute top-3 left-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
+                  {t("Antes", "Before")}
+                </span>
+                <span className="absolute top-3 right-3 text-xs font-medium px-2 py-1 rounded bg-background/80 text-foreground backdrop-blur-sm pointer-events-none">
+                  {t("Después", "After")}
+                </span>
+              </div>
+              <p className="mt-3 text-center text-sm text-muted-foreground">
+                {t(label, labelEn)}
+              </p>
             </div>
           ))}
         </div>
