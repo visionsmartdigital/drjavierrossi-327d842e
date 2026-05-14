@@ -39,8 +39,8 @@ export function BeforeAfterSection() {
     { n: 1, before: beforeCase1, after: afterCase1, label: "Feminización Facial", labelEn: "Facial Feminization" },
     { n: 2, before: beforeCase2, after: afterCase2, label: "Feminización Facial", labelEn: "Facial Feminization" },
     { n: 3, before: beforeCase3, after: afterCase3, label: "Feminización Facial", labelEn: "Facial Feminization" },
-    { n: 4, before: beforeCase4, after: afterCase4, label: "Rejuvenecimiento Facial", labelEn: "Facial Rejuvenation" },
-    { n: 5, before: beforeCase5, after: afterCase5, label: "Cirugía de la Mirada", labelEn: "Eye Surgery" },
+    { n: 4, before: beforeCase4, after: afterCase4, label: "Rejuvenecimiento del Cuello", labelEn: "Neck Rejuvenation" },
+    { n: 5, before: beforeCase5, after: afterCase5, label: "Rejuvenecimiento Mirada-Facial", labelEn: "Eye-Facial Rejuvenation" },
     { n: 6, before: beforeCase6, after: afterCase6, label: "Cirugía Estética Ósea Facial", labelEn: "Facial Bone Aesthetic Surgery" },
   ];
 
