@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { sendContactEmail } from "@/lib/contact.functions";
 
 export function ContactSection() {
   const { t } = useI18n();
@@ -19,15 +20,7 @@ export function ContactSection() {
     setError(null);
     setSubmitting(true);
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, service, message }),
-      });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error || "Submit failed");
-      }
+      await sendContactEmail({ data: { name, email, phone, service, message } });
       if (typeof window !== "undefined" && (window as any).dataLayer) {
         (window as any).dataLayer.push({ event: "contact_form_submit" });
       }
