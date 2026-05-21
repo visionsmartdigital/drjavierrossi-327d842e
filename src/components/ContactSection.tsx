@@ -62,8 +62,8 @@ export function ContactSection() {
             </h2>
             <p className="mt-3 text-sm opacity-80 leading-relaxed">
               {t(
-                "Completá el formulario y te respondemos a la brevedad.",
-                "Fill out the form and we'll get back to you shortly."
+                "Completá el formulario y te respondemos a la brevedad",
+                "Fill out the form and we'll get back to you shortly"
               )}
             </p>
             <div className="mt-8 space-y-4 text-sm opacity-90">
