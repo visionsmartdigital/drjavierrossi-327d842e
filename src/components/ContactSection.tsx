@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { sendContactEmail } from "@/lib/contact.functions";
 
 export function ContactSection() {
   const { t } = useI18n();
