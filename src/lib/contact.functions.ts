@@ -1,10 +1,13 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
-const RECIPIENT = "vision.smartdigital@gmail.com";
-const FROM_ADDRESS = "Dr. Javier Rossi <onboarding@resend.dev>";
+const RECIPIENTS = [
+  "macarena.delgado.crear@gmail.com",
+  "dr_rossijavier@yahoo.com",
+];
+
+const FROM_ADDRESS = "consultas@drjavierrossi.com";
 const SUBJECT = "Nueva consulta desde drjavierrossi.com";
-const GATEWAY_URL = "https://connector-gateway.lovable.dev/resend";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -26,13 +29,9 @@ function escapeHtml(str: string): string {
 export const sendContactEmail = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => contactSchema.parse(input))
   .handler(async ({ data }) => {
-    const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
-    if (!LOVABLE_API_KEY) {
-      throw new Error("LOVABLE_API_KEY is not configured");
-    }
-    const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    if (!RESEND_API_KEY) {
-      throw new Error("RESEND_API_KEY is not configured");
+    const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
+    if (!SMTP_PASSWORD) {
+      throw new Error("SMTP_PASSWORD is not configured");
     }
 
     const { name, email, phone, service, message } = data;
@@ -56,26 +55,28 @@ export const sendContactEmail = createServerFn({ method: "POST" })
       message || "—",
     ].join("\n");
 
-    const response = await fetch(`${GATEWAY_URL}/emails`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
-        "X-Connection-Api-Key": RESEND_API_KEY,
+    const nodemailer = (await import("nodemailer")).default;
+    const transporter = nodemailer.createTransport({
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "consultas@drjavierrossi.com",
+        pass: SMTP_PASSWORD,
       },
-      body: JSON.stringify({
-        from: FROM_ADDRESS,
-        to: [RECIPIENT],
-        reply_to: email,
+    });
+
+    try {
+      await transporter.sendMail({
+        from: `"Dr. Javier Rossi" <${FROM_ADDRESS}>`,
+        to: RECIPIENTS,
+        replyTo: email,
         subject: SUBJECT,
         html,
         text,
-      }),
-    });
-
-    if (!response.ok) {
-      const body = await response.text();
-      console.error(`Resend send failed [${response.status}]:`, body);
+      });
+    } catch (err) {
+      console.error("SMTP send failed:", err);
       throw new Error("Email send failed");
     }
 
